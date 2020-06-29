@@ -19,7 +19,7 @@ class UserViewModel {
             
             switch result {
             case .success(let listOf):
-                self?.usersData = [listOf]
+                self?.usersData = listOf
                 completion()
             case .failure(let error):
                 // Something

@@ -12,7 +12,7 @@ class APIService{
     
     private var dataTask: URLSessionDataTask?
     
-    func getGitHubUsersData(completion: @escaping (Result<User, Error>) -> Void) {
+    func getGitHubUsersData(completion: @escaping (Result<[User], Error>) -> Void) {
         
         let gitHubUserURL = "https://api.github.com/users"
         
@@ -44,7 +44,7 @@ class APIService{
             do {
                 // Parse the data
                 let deconder = JSONDecoder()
-                let jsonData = try deconder.decode(User.self, from:  data)
+                let jsonData = try deconder.decode([User].self, from:  data)
                 
                 // Back to the main thread
                 DispatchQueue.main.async {

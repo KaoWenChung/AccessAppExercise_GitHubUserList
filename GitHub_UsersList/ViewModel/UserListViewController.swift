@@ -18,7 +18,6 @@ class UserListViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         loadUserData()
-
     }
     
     private func loadUserData() {
