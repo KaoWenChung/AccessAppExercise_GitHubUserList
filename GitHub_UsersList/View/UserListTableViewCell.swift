@@ -14,7 +14,6 @@ class UserListTableViewCell: UITableViewCell {
     @IBOutlet weak var siteAdmin: UIImageView!
     @IBOutlet weak var userImage: UIImageView! {
         didSet {
-            
             userImage.layer.cornerRadius = 36.0
             userImage.clipsToBounds = true
         }
@@ -31,10 +30,11 @@ class UserListTableViewCell: UITableViewCell {
     private func updateUI(name: String?, image: String?, badge: Bool?) {
         
         self.nameLabel.text = name
+        
+        // Display badge
         if badge == false {
             self.siteAdmin.isHidden = true
         }
-//        self.siteAdmin.isHidden = badge ?? true
         
         guard let ImageString = image else { return }
         urlString = ImageString

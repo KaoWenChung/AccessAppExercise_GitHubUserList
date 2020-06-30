@@ -14,7 +14,7 @@ class APIService{
     
     func getGitHubUsersData(completion: @escaping (Result<[User], Error>) -> Void) {
         
-        let gitHubUserURL = "https://api.github.com/users"
+        let gitHubUserURL = "https://api.github.com/users?page=1&per_page=100"
         
         guard let url = URL(string: gitHubUserURL) else { return }
         

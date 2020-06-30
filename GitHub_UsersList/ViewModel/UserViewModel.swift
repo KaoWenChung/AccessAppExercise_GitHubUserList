@@ -30,6 +30,7 @@ class UserViewModel {
     
     func numberOfRowsInSection(section: Int) -> Int {
         if usersData.count != 0 {
+            print("Useree:\(usersData.count)")
             return usersData.count
         }
         return 0
