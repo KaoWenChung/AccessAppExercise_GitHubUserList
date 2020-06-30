@@ -14,17 +14,32 @@ class UserListViewController: UIViewController {
 
     private var viewModel = UserViewModel()
     
-    let cellSpacingHeight: CGFloat = 5
+    var spinner = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         loadUserData()
+        startSpinner()
+    }
+    
+    private func startSpinner() {
+        spinner.style = .medium
+        spinner.hidesWhenStopped = true
+        view.addSubview(spinner)
+        
+        // Define the constraint of spinner
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([ spinner.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 150.0), spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor)])
+        
+        // Start animation
+        spinner.startAnimating()
     }
     
     private func loadUserData() {
         viewModel.fetchUsersData { [weak self] in
             self?.tableView.dataSource = self
+            self?.spinner.stopAnimating()
             self?.tableView.reloadData()
         }
     }
