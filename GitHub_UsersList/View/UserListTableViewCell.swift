@@ -11,21 +11,30 @@ import UIKit
 class UserListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var siteAdmin: UIImageView!
+    @IBOutlet weak var userImage: UIImageView! {
+        didSet {
+            
+            userImage.layer.cornerRadius = 36.0
+            userImage.clipsToBounds = true
+        }
+    }
     
     private var urlString:String = ""
     
     // Setup users values
     func setCellWithValuesOf(_ user:User) {
-        updateUI(name: user.login, image: user.avatar_url, badge: user.site_admin)
+        updateUI(name: user.name, image: user.image, badge: user.badge)
     }
     
     // Update the UI views
     private func updateUI(name: String?, image: String?, badge: Bool?) {
         
         self.nameLabel.text = name
-        self.siteAdmin.isHidden = badge ?? true
+        if badge == false {
+            self.siteAdmin.isHidden = true
+        }
+//        self.siteAdmin.isHidden = badge ?? true
         
         guard let ImageString = image else { return }
         urlString = ImageString

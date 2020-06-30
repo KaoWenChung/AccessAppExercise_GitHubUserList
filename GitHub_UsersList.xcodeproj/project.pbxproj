@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21485BA524AB837F00CCA204 /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21485BA424AB837F00CCA204 /* DesignView.swift */; };
 		21D98BB324A99F8000127AF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D98BB224A99F8000127AF6 /* AppDelegate.swift */; };
 		21D98BB524A99F8000127AF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D98BB424A99F8000127AF6 /* SceneDelegate.swift */; };
 		21D98BBA24A99F8000127AF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D98BB824A99F8000127AF6 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21485BA424AB837F00CCA204 /* DesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
 		21D98BAF24A99F8000127AF6 /* GitHub_UsersList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHub_UsersList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D98BB224A99F8000127AF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21D98BB424A99F8000127AF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				21D98BB824A99F8000127AF6 /* Main.storyboard */,
 				21D98BCF24A9EE1F00127AF6 /* UserListTableViewCell.swift */,
+				21485BA424AB837F00CCA204 /* DesignView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21485BA524AB837F00CCA204 /* DesignView.swift in Sources */,
 				21D98BD424AA2BD100127AF6 /* UserListViewController.swift in Sources */,
 				21D98BC824A9A4B000127AF6 /* User.swift in Sources */,
 				21D98BCE24A9CF4000127AF6 /* APIService.swift in Sources */,

@@ -14,6 +14,8 @@ class UserListViewController: UIViewController {
 
     private var viewModel = UserViewModel()
     
+    let cellSpacingHeight: CGFloat = 5
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -38,9 +40,7 @@ extension UserListViewController: UITableViewDataSource {
         
         let user = viewModel.cellForRowAt(indexPath: indexPath)
         cell.setCellWithValuesOf(user)
-        
+
         return cell
     }
-    
-    
 }

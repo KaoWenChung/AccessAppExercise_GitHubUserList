@@ -9,12 +9,9 @@
 import Foundation
 
 struct User: Decodable {
-    let login : String?
-    let avatar_url : String?
-    let site_admin : Bool?
-//    let name : String?
-//    let image: String?
-//    let badge: Bool?
+    let name : String?
+    let image: String?
+    let badge: Bool?
 //    let id: Int?
 //    let node_id: String?
 //    let gravatar_id: String?
@@ -32,10 +29,9 @@ struct User: Decodable {
 //    let type: String?
     
     private enum CodingKeys: String, CodingKey {
-        case login, avatar_url, site_admin
-//        case name  = "login"
-//        case image = "avatar_url"
-//        case badge = "site_admin"
+        case name  = "login"
+        case image = "avatar_url"
+        case badge = "site_admin"
 //        case id
 //        case node_id
 //        case gravatar_id
